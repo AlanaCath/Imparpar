@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <title>Impar ou par</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+     <link rel="stylesheet" href="parimpar.css">
+</head>
+<body>
+    <h1>O número é par ou é impar?</h1>
+    <button onclick="teste()">Clipe para iniciar</button>
+    <section id="result">
+        <p>O resultado será apresentado aqui...</p>
+    </section>
+
+<script>
+    function teste() {
+        var num = Number (window.prompt(`Digite um número: `))
+        var tipo
+        if (num % 2 == 0) (
+            tipo = `<strong>PAR</strong>`
+        ); else (
+            tipo = `<strong>ÍMPAR</strong>`
+        )
+
+        var res = document.querySelector (`section#result`)
+        res.innerHTML = `<p>O número ${num} que foi digitado é ${tipo}!</p>`
+
+    }
+</script>
